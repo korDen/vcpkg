@@ -10,5 +10,4 @@ index 566fe1f..d0d4e8a 100644
 +INSTALL(TARGETS bc7 
 +    RUNTIME DESTINATION bin
 +    LIBRARY DESTINATION lib
-+    ARCHIVE DESTINATION lib/static)
-\ No newline at end of file
++    ARCHIVE DESTINATION lib)

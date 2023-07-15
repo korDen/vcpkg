@@ -10,5 +10,4 @@ index 65a5dd3..d093ce5 100644
 +INSTALL(TARGETS nvsquish
 +    RUNTIME DESTINATION bin
 +    LIBRARY DESTINATION lib
-+    ARCHIVE DESTINATION lib/static)
-\ No newline at end of file
++    ARCHIVE DESTINATION lib)

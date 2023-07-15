@@ -34,10 +34,16 @@ index c2f8908..b652497 100644
  using namespace std;
  
 diff --git a/src/nvtt/CMakeLists.txt b/src/nvtt/CMakeLists.txt
-index 8285f99..9688c9c 100644
+index 987c185..d3c4cc6 100644
 --- a/src/nvtt/CMakeLists.txt
 +++ b/src/nvtt/CMakeLists.txt
-@@ -63,5 +63,5 @@ INSTALL(TARGETS nvtt
+@@ -58,10 +58,10 @@ TARGET_LINK_LIBRARIES(nvtt ${LIBS} nvcore nvimage nvthread nvsquish bc6h bc7 nvm
+ INSTALL(TARGETS nvtt 
+     RUNTIME DESTINATION bin
+     LIBRARY DESTINATION lib
+-    ARCHIVE DESTINATION lib/static)
++    ARCHIVE DESTINATION lib)
+ 
  INSTALL(FILES nvtt.h nvtt_wrapper.h DESTINATION include/nvtt)
  
  
@@ -45,3 +51,48 @@ index 8285f99..9688c9c 100644
 -ADD_SUBDIRECTORY(tests)
 +#ADD_SUBDIRECTORY(tools)
 +#ADD_SUBDIRECTORY(tests)
+
+diff --git a/src/nvcore/CMakeLists.txt b/src/nvcore/CMakeLists.txt
+index 98081e6..d68154e 100644
+--- a/src/nvcore/CMakeLists.txt
++++ b/src/nvcore/CMakeLists.txt
+@@ -47,4 +47,4 @@ endif()
+ INSTALL(TARGETS nvcore
+     RUNTIME DESTINATION bin
+     LIBRARY DESTINATION lib
+-    ARCHIVE DESTINATION lib/static)
++    ARCHIVE DESTINATION lib)
+
+diff --git a/src/nvimage/CMakeLists.txt b/src/nvimage/CMakeLists.txt
+index 42f21f4..a56d191 100644
+--- a/src/nvimage/CMakeLists.txt
++++ b/src/nvimage/CMakeLists.txt
+@@ -59,5 +59,5 @@ TARGET_LINK_LIBRARIES(nvimage ${LIBS} nvcore posh bc6h bc7 nvmath)
+ INSTALL(TARGETS nvimage
+     RUNTIME DESTINATION bin
+     LIBRARY DESTINATION lib
+-    ARCHIVE DESTINATION lib/static)
++    ARCHIVE DESTINATION lib)
+
+diff --git a/src/nvthread/CMakeLists.txt b/src/nvthread/CMakeLists.txt
+index 15dbc4e..b677497 100644
+--- a/src/nvthread/CMakeLists.txt
++++ b/src/nvthread/CMakeLists.txt
+@@ -25,4 +25,4 @@ TARGET_LINK_LIBRARIES(nvthread ${LIBS} nvcore)
+ INSTALL(TARGETS nvthread
+    RUNTIME DESTINATION bin
+    LIBRARY DESTINATION lib
+-   ARCHIVE DESTINATION lib/static)
++   ARCHIVE DESTINATION lib)
+
+diff --git a/src/nvmath/CMakeLists.txt b/src/nvmath/CMakeLists.txt
+index c7a01ed..98d51c6 100644
+--- a/src/nvmath/CMakeLists.txt
++++ b/src/nvmath/CMakeLists.txt
+@@ -21,4 +21,4 @@ TARGET_LINK_LIBRARIES(nvmath ${LIBS} nvcore)
+ INSTALL(TARGETS nvmath
+     RUNTIME DESTINATION bin
+     LIBRARY DESTINATION lib
+-    ARCHIVE DESTINATION lib/static)
++    ARCHIVE DESTINATION lib)
+
